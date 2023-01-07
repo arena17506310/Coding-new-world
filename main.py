@@ -10,4 +10,6 @@ def mup1(a, b):
       b = mup(b , b)
     return b
 
-print(mup1(3,2))
+a = int(input("곱할 횟수 | "))
+b = int(input("곱할 숫자 | "))
+print(mup1(a, b))
