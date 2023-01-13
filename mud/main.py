@@ -39,7 +39,7 @@ class YOU:
 
 
 
-while hp > 0 | YOU.hp > 0:
+while hp > 0:
     
     print(f"""
 
