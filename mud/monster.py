@@ -6,7 +6,7 @@ class Nothing:
         hp = 99999
         atk = 9999999
         att = "🌱"
-        chr = open(f"{currentPath}\\monsters\\worm.txt","rt", encoding='UTF8').read()
+        chr = open(f"{currentPath}\\monsters\\nothing.txt","rt", encoding='UTF8').read()
 
 class Worm:
         hp = 20

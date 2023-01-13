@@ -13,11 +13,12 @@ mons_list = {
 skills = []
 
 colorama_init()
-
 name = "worm"
+
 hp = mons_list[name].hp
 atk = mons_list[name].atk
 att = mons_list[name].att
+chr = mons_list[name].chr
 
 def check_letter():
     l = str(input("할 동작의 문자를 입력하시오) "))
@@ -38,7 +39,7 @@ class YOU:
 
 
 
-while hp > 0:
+while hp > 0 | YOU.hp > 0:
     
     print(f"""
 
@@ -58,7 +59,7 @@ while hp > 0:
 Info) ❤️:{hp} ⚔️:{atk} {att}
 ┌─                ─┐
 {Fore.MAGENTA}
-{Worm.chr}
+{chr}
 {Fore.RESET}
 └─                ─┘""")
     print(f"""┌──────────────────┐
