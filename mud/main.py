@@ -20,9 +20,8 @@ atk = mons_list[name].atk
 att = mons_list[name].att
 chr = mons_list[name].chr
 
-def check_letter():
+def check_letter(hp):
     l = str(input("할 동작의 문자를 입력하시오) "))
-    global hp
     if l == "A" or l == "a":
         hp -= YOU.atk
     elif l == "I" or l == "i":
@@ -32,7 +31,7 @@ def check_letter():
     elif  l == "R" | l == "r":
         breakpoint
     YOU.hp -= atk
-
+    return hp
 class YOU:
     hp = 30
     atk = 10
