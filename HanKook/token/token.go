@@ -3,15 +3,15 @@ package token
 type TokenType string
 
 const (
-	ILLEGAL TokenType = "ILLEGAL"
-	EOF               = "EOF"
+	ILLEGAL = "ILLEGAL"
+	EOF     = "EOF"
 
-	// 식별자 및 리터럴
+	// idntifier, literal
 	IDENT  = "IDENT"  // add, foobar, x, y, ...
 	INT    = "INT"    // 123456
 	STRING = "STRING" // "hello world"
 
-	// 연산자
+	// operator
 	ASSIGN = "="
 	PLUS   = "+"
 	MINUS  = "-"
@@ -25,7 +25,7 @@ const (
 	EQ     = "=="
 	NOT_EQ = "!="
 
-	// 구분자
+	// separator
 	COMMA     = ","
 	SEMICOLON = ";"
 
@@ -36,15 +36,26 @@ const (
 	LBRACK = "["
 	RBRACK = "]"
 
-	// 키워드
-	FUNC        = "func"
-	LET         = "let"
-	IF          = "if"
-	ELSE        = "else"
-	RETURN      = "return"
-	TRUE        = "true"
-	FALSE       = "false"
-	BOOL        = "bool"
-	INT_TYPE    = "int"
-	STRING_TYPE = "string"
+	// keyword
+	START  = "start"
+	END    = "end"
+	FUNC   = "func"
+	IF     = "if"
+	ELSE   = "else"
+	RETURN = "return"
+	PRINT  = "print"
+
+	//type
+	BOOL_TYPE     = "bool"
+	TRUE          = "true"
+	FALSE         = "false"
+	P_PLURAL_TYPE = "eyes"
+	N_PLURAL_TYPE = "seye"
+	P_SINGUL_TYPE = "peye"
+	N_SINGUL_TYPE = "meye"
+	STRING_TYPE   = "string"
+	CHAR_TYPE     = "char"
+	ARRAY         = "array"
 )
+
+// go ma wu yo chet gee pee tee
