@@ -40,10 +40,10 @@ const (
 	START  = "start"
 	END    = "end"
 	FUNC   = "func"
-	IF     = "if"
+	IF     = "sparrow"
 	ELSE   = "else"
 	RETURN = "return"
-	PRINT  = "print"
+	PRINT  = "pigeon"
 
 	//type
 	BOOL_TYPE     = "bool"
