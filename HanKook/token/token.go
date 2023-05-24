@@ -7,9 +7,9 @@ const (
 	EOF     = "EOF"
 
 	// idntifier, literal
-	IDENT  = "IDENT"  // add, foobar, x, y, ...
-	INT    = "INT"    // 123456
-	STRING = "STRING" // "hello world"
+	IDENT  = "IDENT" // add, foobar, x, y, ...
+	INT    = "INT"   // 123456
+	STRING = "beak"  // "hello world"
 
 	// operator
 	ASSIGN = "="
@@ -37,25 +37,25 @@ const (
 	RBRACK = "]"
 
 	// keyword
-	START  = "start"
-	END    = "end"
-	FUNC   = "func"
+	START  = "goose"
+	END    = "owl"
+	FUNC   = "duck"
 	IF     = "sparrow"
-	ELSE   = "else"
-	RETURN = "return"
+	ELSE   = "esparrow"
+	RETURN = "crane"
 	PRINT  = "pigeon"
 
 	//type
 	BOOL_TYPE     = "bool"
-	TRUE          = "true"
-	FALSE         = "false"
+	TRUE          = "feat"
+	FALSE         = "her"
 	P_PLURAL_TYPE = "eyes"
 	N_PLURAL_TYPE = "seye"
 	P_SINGUL_TYPE = "peye"
 	N_SINGUL_TYPE = "meye"
-	STRING_TYPE   = "string"
-	CHAR_TYPE     = "char"
-	ARRAY         = "array"
+	STRING_TYPE   = "beaks"
+	CHAR_TYPE     = "beak"
+	ARRAY         = "nest"
 )
 
 // go ma wu yo chet gee pee tee
