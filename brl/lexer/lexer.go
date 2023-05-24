@@ -3,7 +3,7 @@
 package lexer
 
 import (
-	"CODING-NEW-WORLD-2\jangsiwoo\token\token"
+	"CODING-NEW-WORLD-2\brl\token\token"
 )
 
 type Lexer struct {
