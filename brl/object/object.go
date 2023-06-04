@@ -1,7 +1,5 @@
 package object
 
-import "strconv"
-
 type env struct {
 	store map[int]Object
 }
