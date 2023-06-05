@@ -10,6 +10,11 @@ type Assignment struct {
 	Right Node
 }
 
+type Expression interface {
+	Node
+	expressionNode()
+}
+
 // Identifier 노드
 type Identifier struct {
 	Name string
