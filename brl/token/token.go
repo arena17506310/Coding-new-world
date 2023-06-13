@@ -62,15 +62,3 @@ const (
 	CHAR_TYPE     = "beak"
 	ARRAY         = "nest"
 )
-
-type Object struct {
-	Type  TokenType
-	Value interface{}
-}
-
-func NewObject(tokenType TokenType, value interface{}) Object {
-	return Object{
-		Type:  tokenType,
-		Value: value,
-	}
-}
