@@ -62,12 +62,52 @@ body {
        margin-left:-190 px;  
 }
 
-.login-button {
-    text-decoration:none;  
-    color:black;  
-    margin-left:-190 px;  
-    text-align:center ;
+
+
+#login_main_button { 
+  background-color:#4CAF50 ;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  color:white ;
+  border:none ;
+  padding :12 px ; 
+  text-align:center ;
+  text-decoration:none ; 
+      font-size :16 px ;    
+      cursor:pointer ;    
+      width:400px ;
+      padding: 10px;
+
 }
 
+#login_main_button:hover { 
+    background-color:#45a049 ;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    cursor:pointer ;
 
 
+}
+
+#re_main_button {
+  background-color: aqua;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+    font-size: 16;
+    cursor: pointer;
+    width: 400px;
+    padding: 10px;
+}
+
+#re_main_button:hover {
+  background-color: #00b7ff;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+}
