@@ -16,6 +16,9 @@ body {
   font-size: 18px;
   margin-bottom: 20px;
   text-align: center;
+  color: inherit;
+  cursor: text;
+  text-decoration: none;
 }
 
 .login-form-group {
@@ -99,10 +102,4 @@ body {
   cursor: pointer;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#period {
-  color: inherit;
-  cursor: text;
-  text-decoration: none;
 }
