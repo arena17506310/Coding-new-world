@@ -15,7 +15,7 @@ $(document).ready(function () {
         .text("빈 칸에 정보를 모두 기입하여 주세요.");
       return;
     }
-
+    // 하시발살려줘
     // AJAX 요청
     $.ajax({
       url: "signup.php",
