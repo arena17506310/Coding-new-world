@@ -1,8 +1,8 @@
 <?php
-$host = "localhost";
-$db   = "database_name";
-$user = "username";
-$pass = "password";
+$host = "svc.sel5.cloudtype.app";
+$db   = "alexanderia";
+$user = "root";
+$pass = "camel99";
 
 // Create connection to MariaDB
 $conn = new mysqli($host, $user, $pass, $db);
