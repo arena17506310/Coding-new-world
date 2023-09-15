@@ -21,7 +21,7 @@ $password = $_POST['password'];
 $phoneNum = $_POST['phoneNum'];
 $schoolNum= $_POST['schoolNum'];
 
-$sql = "INSERT INTO users (userName, password, phoneNum, schoolNum) VALUES (?, ?, ?, ?)";
+$sql = "INSERT INTO accounts (userName, password, phoneNum, schoolNum) VALUES (?, ?, ?, ?)";
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("ssss", $username, password_hash($password, PASSWORD_DEFAULT), $phoneNum, $schoolNum);
