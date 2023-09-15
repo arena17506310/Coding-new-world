@@ -28,7 +28,8 @@ $(document).ready(function () {
       }, // 비밀번호 및 아이디 전송 ( 건들지 마라 뒤진다 ) -> 전화번호랑 학번 저장 안함? 구별은 해야지
       success: function (response) {
         $(".message").addClass("success").text("회원가입 요청 성공");
-        window.location.href = "signup.php"; // 이 부분을 추가합니다.
+        window.location.href = "signup.php";
+        console.log("success"); // 이 부분을 추가합니다.
         // 성공적으로 처리된 후 실행할 코드 작성
       },
       error: function () {
