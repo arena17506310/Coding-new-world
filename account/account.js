@@ -8,7 +8,9 @@ $(document).ready(function () {
     $(".message").removeClass("error success");
 
     if (username === "" || password === "") {
-      $(".message").addClass("error").text("빈 칸에 정보를 모두 기입하여 주세요.");
+      $(".message")
+        .addClass("error")
+        .text("빈 칸에 정보를 모두 기입하여 주세요.");
       return;
     }
 
@@ -19,6 +21,7 @@ $(document).ready(function () {
       data: { username: username, password: password }, // 비밀번호 및 아이디 전송 ( 건들지 마라 뒤진다 )
       success: function (response) {
         $(".message").addClass("success").text("회원가입 요청 성공");
+        window.location.href = "signup.php"; // 이 부분을 추가합니다.
         // 성공적으로 처리된 후 실행할 코드 작성
       },
       error: function () {
@@ -26,7 +29,7 @@ $(document).ready(function () {
           .addClass("error")
           .text("서버와의 통신 중 오류가 발생했습니다.");
         // 오류 발생 시 실행할 코드 작성
-      }
+      },
     });
   });
 });
