@@ -24,7 +24,7 @@ $stmt->bind_param("ssss", $username, $password, $phoneNum, $schoolNum);
 
 if ($stmt->execute()) {
     echo "New record created successfully";
-    header('Location: https://port-9000-coding-new-world-30yyr422almhdj93d.sel5.cloudtype.app/board/main.html');
+    echo("<script>location.replace('../board/main.html');</script>");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
