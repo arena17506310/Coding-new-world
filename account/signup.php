@@ -24,6 +24,7 @@ $stmt->bind_param("ssss", $username, $password, $phoneNum, $schoolNum);
 
 if ($stmt->execute()) {
     echo "New record created successfully";
+    header('Location: ccount.html');
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
