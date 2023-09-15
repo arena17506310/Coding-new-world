@@ -4,6 +4,8 @@ $(document).ready(function () {
 
     var username = $("#username").val(); // username 필드 추가
     var password = $("#password").val(); // password 필드 추가
+    var phoneNum = $("#phoneNum").val();
+    var schoolNum = $("#schoolNum").val();
 
     $(".message").removeClass("error success");
 
@@ -18,7 +20,12 @@ $(document).ready(function () {
     $.ajax({
       url: "signup.php",
       type: "POST",
-      data: { username: username, password: password }, // 비밀번호 및 아이디 전송 ( 건들지 마라 뒤진다 )
+      data: {
+        username: username,
+        password: password,
+        phoneNum: phoneNum,
+        schoolNum: schoolNum,
+      }, // 비밀번호 및 아이디 전송 ( 건들지 마라 뒤진다 ) -> 전화번호랑 학번 저장 안함? 구별은 해야지
       success: function (response) {
         $(".message").addClass("success").text("회원가입 요청 성공");
         window.location.href = "signup.php"; // 이 부분을 추가합니다.
