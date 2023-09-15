@@ -1,10 +1,10 @@
 <?php
-$host = "svc.sel5.cloudtype.app:30279";
-$db   = "alexandria";
-$user = "root";
-$pass = "camel99";
+$host = "localhost";
+$db   = "database_name";
+$user = "username";
+$pass = "password";
 
-// Create connection
+// Create connection to MariaDB
 $conn = new mysqli($host, $user, $pass, $db);
 
 // Check connection
@@ -12,24 +12,25 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+if (!isset($_POST['username']) || !isset($_POST['password']) || !isset($_POST['phoneNum']) || !isset($_POST['schoolNum'])) {
+    die("Error: Required field is missing");
+}
+
 $username = $_POST['username'];
 $password = $_POST['password'];
 $phoneNum = $_POST['phoneNum'];
-$schoolNum = $_POST['schoolNum'];
+$schoolNum= $_POST['schoolNum'];
 
-$sql = "INSERT INTO accounts (username, pw, phoneNum, schoolNum) VALUES (?, ?, ?, ?)";
+$sql = "INSERT INTO users (userName, password, phoneNum, schoolNum) VALUES (?, ?, ?, ?)";
 
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("ssss", $username, $password, $phoneNum, $schoolNum);
+$stmt->bind_param("ssss", $username, password_hash($password, PASSWORD_DEFAULT), $phoneNum, $schoolNum);
 
 if ($stmt->execute()) {
-    ob_start();
-    echo "New record created successfully";
-    ob_end_flush();
-    echo("<script>location.replace('../board/main.html');</script>");
+    header('Location: ccount.html');
     exit;
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
 $conn->close();
