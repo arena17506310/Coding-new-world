@@ -20,7 +20,7 @@ $schoolNum = $_POST['schoolNum'];
 $sql = "INSERT INTO accounts (username, pw, phoneNum, schoolNum) VALUES (?, ?, ?, ?)";
 
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("ss", $username, $password, $phoneNum, $schoolNum);
+$stmt->bind_param("ssss", $username, $password, $phoneNum, $schoolNum);
 
 if ($stmt->execute()) {
     echo "New record created successfully";
