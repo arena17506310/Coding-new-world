@@ -1,6 +1,6 @@
 <?php
 $host = "svc.sel5.cloudtype.app";
-$db   = "alexanderia";
+$db   = "alexandria";
 $user = "root";
 $pass = "camel99";
 
