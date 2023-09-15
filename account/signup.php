@@ -24,9 +24,8 @@ $stmt->bind_param("ssss", $username, $password, $phoneNum, $schoolNum);
 
 if ($stmt->execute()) {
     ob_start();
-    echo("<script>location.replace('../board/main.html');</script>");
     echo "New record created successfully";
-    header('Location: ccount.html');
+    ob_end_flush();
     echo("<script>location.replace('../board/main.html');</script>");
     exit;
 } else {
