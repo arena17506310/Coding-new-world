@@ -30,7 +30,7 @@ $(document).ready(function () {
         if (response.trim() === "Success") {
           // trim() 함수로 앞뒤 공백 제거
           $(".message").addClass("success").text("회원가입 요청 성공");
-          window.location.href = "../board/main.html"; // 메인 페이지로 리다이렉트
+          window.location.href = "../hello/login.html"; // 메인 페이지로 리다이렉트
         } else {
           $(".message")
             .addClass("error")
