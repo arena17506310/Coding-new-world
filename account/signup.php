@@ -32,7 +32,7 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("ssss", $username, $password, $phoneNum, $schoolNum);
 
 if ($stmt->execute()) {
-    header('Location: ..\board\main.html');
+    header('Location: ../board/main.html');
     exit;
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
