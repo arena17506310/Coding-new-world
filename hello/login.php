@@ -19,7 +19,7 @@ if (!isset($_POST['username']) || !isset($_POST['password'])) {
 
 $username = $_POST['username'];
 $password = $_POST['password'];
-
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 $sql = "SELECT pw FROM accounts WHERE userName=?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $username);
