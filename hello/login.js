@@ -1,17 +1,13 @@
 $(document).ready(function () {
-  var urlParams = new URLSearchParams(window.location.search);
-  var username = urlParams.get("username");
-
-  if (username) {
-    $("#username").val(username);
-  }
-  $("#login-form").submit(function (e) {
+  $("#re_main_button").click(function (e) {
+    e.preventDefault();
+    window.location.href = "../account/ccount.html";
+  });
+  $(".login-form").submit(function (e) {
     e.preventDefault();
 
     var username = $("#username").val();
     var password = $("#password").val();
-
-    $(".message").removeClass("error success");
 
     // AJAX 요청
     $.ajax({
@@ -23,12 +19,9 @@ $(document).ready(function () {
       },
       success: function (response) {
         if (response.trim() === "Success") {
-          $(".message").addClass("success").text("로그인 성공");
-          window.location.href = "../board/main.html";
+          window.location.href = "../board/main.html"; // 로그인 성공 시 메인 페이지로 리다이렉트
         } else {
-          $(".message")
-            .addClass("error")
-            .text(response + "서버와 연결에 실패했습니다.");
+          $(".message").text("로그인 실패 : " + response); // 실패 시 서버의 에러 메시지 출력
         }
       },
     });
