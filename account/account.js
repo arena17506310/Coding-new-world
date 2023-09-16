@@ -27,14 +27,14 @@ $(document).ready(function () {
         schoolNum: schoolNum,
       }, // 비밀번호 및 아이디 전송 ( 건들지 마라 뒤진다 ) -> 전화번호랑 학번 저장 안함? 구별은 해야지
       success: function (response) {
-        if (response === "Success") {
-          // 가정: signup.php 에서 성공 시 'Success' 문자열 반환
+        if (response.trim() === "Success") {
+          // trim() 함수로 앞뒤 공백 제거
           $(".message").addClass("success").text("회원가입 요청 성공");
-          window.location.href = "/"; // 메인 페이지로 리다이렉트
+          window.location.href = "../board/main.html"; // 메인 페이지로 리다이렉트
         } else {
           $(".message")
             .addClass("error")
-            .text(response + "\n서버와연결에실패했습니다."); // 실패 시 서버의 에러 메시지 출력
+            .text(response + "\n서버와 연결에 실패했습니다."); // 실패 시 서버의 에러 메시지 출력
         }
       },
     });
