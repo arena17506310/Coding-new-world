@@ -19,10 +19,10 @@ if (!isset($_POST['username']) || !isset($_POST['password']) || !isset($_POST['p
     die("Error: Required field is missing");
 }
 
-$username = $_POST['username'];
-$password = $_POST['password'];
-$phoneNum = $_POST['phoneNum'];
-$schoolNum= $_POST['schoolNum'];
+$username = mysqli_real_escape_string($conn, $_POST['username']);
+$password = mysqli_real_escape_string($conn, $_POST['password']);
+$phoneNum = mysqli_real_escape_string($conn, $_POST['phoneNum']);
+$schoolNum= mysqli_real_escape_string($conn, $_POST['schoolNum']);
 
 $password = hash('sha256', $password);
 

@@ -1,55 +1,59 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-      <!-- meta -->
-    <meta property="og:title" content="비밀번호를 잃어버렸어요 ㅜㅜ">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="비번초기화">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="index_style.css">
+  <head>
+    <!-- meta -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src https://*; child-src 'none';"
+    />
+    <meta property="og:title" content="비밀번호를 잃어버렸어요 ㅜㅜ" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="비번초기화" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="index_style.css" />
     <meta http-equiv="Title" content="비번 초기화 요청" />
     <title>DC 비번 초기화 요청</title>
     <link rel="stylesheet" href="account_style.css" />
-</head>
-<body>
-  <div class="container">
-    <h2>비번 초기화 요청</h2>
+  </head>
+  <body>
+    <div class="container">
+      <h2>비번 초기화 요청</h2>
 
-    <div class="message"></div>
+      <div class="message"></div>
 
-    <form id="signup-form" action="signup.php" method="post">
-      <input
-        type="text"
-        id="username"
-        placeholder="사용자명"
-        required
-      /><br />
- 
-      <input
-        type="password"
-        id="password"
-        placeholder="비밀번호"
-        required
-      /><br />
+      <form id="signup-form" action="signup.php" method="post">
+        <input
+          type="text"
+          id="username"
+          placeholder="사용자명"
+          required
+        /><br />
 
-      <input
-        type="text"
-        id="username"
-        placeholder="휴대전화 번호"
-        required
-      /><br />
+        <input
+          type="password"
+          id="password"
+          placeholder="비밀번호"
+          required
+        /><br />
 
-      <input
-        type="text"
-        id="username"
-        placeholder="당신의 학번"
-        required
-      /><br />
-      <button type="submit">비번 초기화 요청하기</button>
-    </form>
-  </div>
+        <input
+          type="text"
+          id="username"
+          placeholder="휴대전화 번호"
+          required
+        /><br />
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="account _reset.js"></script>
-</body>
+        <input
+          type="text"
+          id="username"
+          placeholder="당신의 학번"
+          required
+        /><br />
+        <button type="submit">비번 초기화 요청하기</button>
+      </form>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="account _reset.js"></script>
+  </body>
 </html>

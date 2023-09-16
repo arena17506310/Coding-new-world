@@ -15,7 +15,8 @@ if (!isset($_POST['username']) || !isset($_POST['password'])) {
   die('Error: Required field is missing');
 }
 
-$username = $_POST['username'];
+$username = mysqli_real_escape_string($conn, $_POST['username']);
+$password = mysqli_real_escape_string($conn, $_POST['password']);
 $password = hash('sha256', $_POST['password']); // Hash the password using SHA256
 
 $sql = "SELECT pw FROM accounts WHERE userName=?";
