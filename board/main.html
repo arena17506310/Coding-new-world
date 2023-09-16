@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Simple Board</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
-    <p>살려줘</p>
+    <h2>New Post</h2>
+
+    <form id="post-form">
+      <label for="title">Title:</label><br />
+      <input type="text" id="title" name="title" /><br />
+      <label for="content">Content:</label><br />
+      <textarea id="content" name="content"></textarea><br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <h2>Posts</h2>
+
+    <div id="posts"></div>
+
+    <script src="./main.js"></script>
   </body>
 </html>
