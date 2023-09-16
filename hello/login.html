@@ -48,17 +48,17 @@
           <!-- AJAX 응답에 따라 처리되는 로직은 login.js에 작성되어 있음-->
           <input id="login_main_button" type="submit" value="로그인" />
         </form>
+        <button
+          id="re_main_button"
+          onclick='location.href="../account/ccount.html"'
+        >
+          회원가입
+        </button>
+
+        <a href="../account/forgot.html">비밀번호를 잊으셨나요?</a>
       </div>
 
       <!-- 회원가입 버튼 (기본 동작: 회원가입 페이지로 이동) -->
-      <button
-        id="re_main_button"
-        onclick='location.href="../account/ccount.html"'
-      >
-        회원가입
-      </button>
-
-      <a href="../account/forgot.html">비밀번호를 잊으셨나요?</a>
 
       <script src="../js/login.js"></script>
     </div>
