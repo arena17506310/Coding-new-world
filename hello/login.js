@@ -18,6 +18,7 @@ $(document).ready(function () {
       success: function (response) {
         if (response.trim() === "Success") {
           $(".message").addClass("success").text("로그인 성공");
+          alert("회원가입에 성공하셨습니다.");
           window.location.href = "../board/main.html";
         } else {
           $(".message")
