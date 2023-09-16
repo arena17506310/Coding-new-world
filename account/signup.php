@@ -33,8 +33,10 @@ $stmt->bind_param("ssss", $username, $password, $phoneNum, $schoolNum);
 if ($stmt->execute()) {
     header('Location: ..\board\main.html');
     exit;
-} else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+} 
+if (!isset($_POST['username']) || !isset($_POST['password']) || !isset($_POST['phoneNum']) || !isset($_POST['schoolNum'])) {
+    error_log('$_POST array: ' . print_r($_POST, true));  // add this line
+    die("Error: Required field is missing");
 }
 
 $conn->close();
