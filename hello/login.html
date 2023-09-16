@@ -1,31 +1,66 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <!-- meta -->
-        <meta property="og:title" content="두리중학교 커뮤니티 DC">
-        <meta property="og:type" content="website">
-        <meta property="og:description" content="두리중학교 전용 커뮤니티 입니다 !">
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="index_style.css">
-        <meta http-equiv="Title" content="대한민국 두리 중학교 전용 커뮤니티 입니다 !" />
-        <title>Duri Community 디씨</title>
-    </head> 
-    <body>
-        <div class="div_1_main">
-            <h2 class="message">로그인이 필요합니다<a href="period.html" class="message">.</a></h2>
-            <div class="div_main">
-                <div class="login-form-group">
-                <form class="login-form" action="#" method="post">
-                    
-                        <input type="text" id= "username" name= "username" placeholder= "사용자명" required/>
-                        <input type = "password" id = "password" name = "password" placeholder= "비밀번호" required/> 
-                        <input id="login_main_button" type ="submit" value =" 로그인"/>
-                    
-                </form>
-                </div>
-            <input id="re_main_button" type ="submit" value =" 회원가입" onclick="location.href='../account/ccount.html'"/>
-            <a href="../account/forgot.html">비밀번호를 잊으셨나요?</a>
-            <div id="msg"></div>
-        </div>       
-    </body>
+  <head>
+    <!-- meta -->
+    <meta property="og:title" content="두리중학교 커뮤니티 DC" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="두리중학교 전용 커뮤니티 입니다 !"
+    />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="index_style.css" />
+    <meta
+      http-equiv="Title"
+      content="대한민국 두리 중학교 전용 커뮤니티 입니다 !"
+    />
+    <title>Duri Community 디씨</title>
+  </head>
+  <body>
+    <div class="div_1_main">
+      <h2 class="message">
+        로그인이 필요합니다<a href="#" class="message">.</a>
+      </h2>
+      <div class="div_main">
+        <!-- 로그인 폼 -->
+        <form class="login-form" action="#" method="post">
+          <!-- 사용자명 입력 필드 -->
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="사용자명"
+            required
+          />
+
+          <!-- 비밀번호 입력 필드 -->
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="비밀번호"
+            required
+          />
+
+          <!-- 로그인 버튼 -->
+          <!-- submit 이벤트 발생 시 login.js의 AJAX 요청 실행 -->
+          <!-- submit 이벤트 기본 동작 방지 -->
+          <!-- AJAX 응답에 따라 처리되는 로직은 login.js에 작성되어 있음-->
+          <input id="login_main_button" type="submit" value="로그인" />
+        </form>
+      </div>
+
+      <!-- 회원가입 버튼 (기본 동작: 회원가입 페이지로 이동) -->
+      <button
+        id="re_main_button"
+        onclick='location.href="../account/ccount.html"'
+      >
+        회원가입
+      </button>
+
+      <a href="../account/forgot.html">비밀번호를 잊으셨나요?</a>
+
+      <script src="../js/login.js"></script>
+    </div>
+  </body>
 </html>
