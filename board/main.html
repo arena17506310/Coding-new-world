@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Board</title>
+    <title>Endless Scroll Site</title>
+    <style>
+      body {
+        height: 2000px; /* 스크롤을 테스트하기 위한 높이 */
+      }
+      #content {
+        margin-top: 100px;
+        padding: 20px;
+      }
+    </style>
   </head>
   <body>
-    <h2>New Post</h2>
-
-    <form id="post-form">
-      <label for="title">Title:</label><br />
-      <input type="text" id="title" name="title" /><br />
-      <label for="content">Content:</label><br />
-      <textarea id="content" name="content"></textarea><br /><br />
-
-      <input type="submit" value="Submit" />
-    </form>
-
-    <h2>Posts</h2>
-
-    <div id="posts"></div>
+    <div id="content"></div>
 
     <script src="./main.js"></script>
   </body>
