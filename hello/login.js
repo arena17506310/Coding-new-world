@@ -21,7 +21,7 @@ $(document).ready(function () {
         if (response.trim() === "Success") {
           window.location.href = "../board/main.html"; // 로그인 성공 시 메인 페이지로 리다이렉트
         } else {
-          $(".message").text("로그인 실패 : " + response); // 실패 시 서버의 에러 메시지 출력
+          $(".msg").text("로그인 실패 : " + response); // 실패 시 서버의 에러 메시지 출력
         }
       },
     });
