@@ -24,7 +24,7 @@ $password = $_POST['password'];
 $phoneNum = $_POST['phoneNum'];
 $schoolNum= $_POST['schoolNum'];
 
-$password = hash('sha256', $password)
+$password = hash('sha256', $password);
 
 $sql = "INSERT INTO accounts (userName, pw, phoneNum, schoolNum) VALUES (?, ?, ?, ?)";
 
