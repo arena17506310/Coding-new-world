@@ -22,32 +22,34 @@
         로그인이 필요합니다<a href="#" class="message">.</a>
       </h2>
       <div class="div_main">
-        <!-- 로그인 폼 -->
-        <form class="login-form" action="#" method="post">
-          <!-- 사용자명 입력 필드 -->
-          <input
-            type="text"
-            id="username"
-            name="username"
-            placeholder="사용자명"
-            required
-          />
+        <div class="login-form-group">
+          <!-- 로그인 폼 -->
+          <form class="login-form" action="#" method="post">
+            <!-- 사용자명 입력 필드 -->
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="사용자명"
+              required
+            />
 
-          <!-- 비밀번호 입력 필드 -->
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="비밀번호"
-            required
-          />
+            <!-- 비밀번호 입력 필드 -->
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="비밀번호"
+              required
+            />
 
-          <!-- 로그인 버튼 -->
-          <!-- submit 이벤트 발생 시 login.js의 AJAX 요청 실행 -->
-          <!-- submit 이벤트 기본 동작 방지 -->
-          <!-- AJAX 응답에 따라 처리되는 로직은 login.js에 작성되어 있음-->
-          <input id="login_main_button" type="submit" value="로그인" />
-        </form>
+            <!-- 로그인 버튼 -->
+            <!-- submit 이벤트 발생 시 login.js의 AJAX 요청 실행 -->
+            <!-- submit 이벤트 기본 동작 방지 -->
+            <!-- AJAX 응답에 따라 처리되는 로직은 login.js에 작성되어 있음-->
+            <input id="login_main_button" type="submit" value="로그인" />
+          </form>
+        </div>
         <button
           id="re_main_button"
           onclick='location.href="../account/ccount.html"'
