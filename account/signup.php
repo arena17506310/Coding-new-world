@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 $host = "svc.sel5.cloudtype.app:30279";
 $db   = "alexandria";
 $user = "root";
