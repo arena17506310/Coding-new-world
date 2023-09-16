@@ -12,7 +12,7 @@ $(document).ready(function () {
 
     // AJAX 요청
     $.ajax({
-      url: "../account/login.php",
+      url: "login.php",
       type: "POST",
       data: {
         username: username,
