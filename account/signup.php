@@ -23,10 +23,12 @@ $password = $_POST['password'];
 $phoneNum = $_POST['phoneNum'];
 $schoolNum= $_POST['schoolNum'];
 
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
 $sql = "INSERT INTO accounts (userName, pw, phoneNum, schoolNum) VALUES (?, ?, ?, ?)";
 
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("ssss", $username, password_hash($password, PASSWORD_DEFAULT), $phoneNum, $schoolNum);
+$stmt->bind_param("ssss", $username, $password, $phoneNum, $schoolNum);
 
 if ($stmt->execute()) {
     header('Location: ..\board\main.html');
