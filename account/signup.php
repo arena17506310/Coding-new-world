@@ -13,8 +13,23 @@ $conn = new mysqli($host, $user, $pass, $db);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
-if (!isset($_POST['username']) || !isset($_POST['password']) || !isset($_POST['phoneNum']) || !isset($_POST['schoolNum'])) {
+//닉네임 안쓰면 작동 안함 ㅅㄱ
+if (!isset($_POST['username'])) {
+    error_log('$_POST array: ' . print_r($_POST, true));
+    die("Error: Required field is missing");
+}
+//비밀번호 안쓰면 작동 안함 ㅅㄱ
+if (!issset($_POST['password'])) {
+    error_log('$_POST array: ' . print_r($_POST, true));
+    die("Error: Required field is missing");
+}
+//전화번호 안쓰면 작동 안함 ㅅㄱ
+if (!issset($_POST['phoneNum'])) {
+    error_log('$_POST array: ' . print_r($_POST, true));
+    die("Error: Required field is missing");
+}
+//학번 안쓰면 작동 안함 ㅅㄱ
+if (!issset($_POST['schoolNum'])) {
     error_log('$_POST array: ' . print_r($_POST, true));
     die("Error: Required field is missing");
 }
